@@ -46,6 +46,17 @@ avisa de nada.
 
 El objetivo es arreglar la página hasta poner todos los e2e en verde, sin romper los unitarios.
 
+## Práctica 2 · Autenticación con storageState
+
+En esta rama la suscripción (`/`) está **protegida**: sin un token válido en `localStorage`,
+`src/js/auth/auth-guard.js` redirige a `/login`. Por eso los e2e de suscripción fallan ahora
+antes de llegar al formulario.
+
+Tu tarea: crea un proyecto `setup` en `playwright.config.ts` que inicie sesión una vez con un
+usuario de demo y guarde el estado con `storageState`. Haz que el proyecto de los tests dependa
+de él y use ese estado, para que los tests de suscripción arranquen ya autenticados, sin tocar
+su código.
+
 ## Estructura
 
 ```
@@ -61,7 +72,7 @@ src/
     forum-posts.js           posts del foro
     forum-page.js            pinta los posts del foro
     login-page.js            comportamiento de la página de login
-    auth/                    usuarios de prueba, token falso y login/logout
+    auth/                    usuarios de prueba, token falso, login/logout y guard
 test/                       tests unitarios (node:test) de la lógica
 e2e/
   playwright.config.ts       levanta `npm start` antes de los tests
