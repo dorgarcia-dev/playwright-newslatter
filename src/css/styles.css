@@ -1,0 +1,239 @@
+/* Estilos globales: paleta y tipografía de las diapositivas del taller. */
+:root {
+  /* Paleta del deck */
+  --navy: #16202a; /* dk1: fondo de la portada */
+  --navy-2: #1e2732; /* dk2 */
+  --white: #ffffff;
+  --green-soft: #eef5ee; /* fondo de tarjetas y callouts */
+  --green: #2ead33; /* acento Playwright */
+  --green-dark: #1f7a24; /* hover y enlaces */
+  --red: #e2574c;
+  --amber: #f2b134;
+  --blue: #3a7bd5;
+  --gray: #8d9aa8;
+  --border: #d5dce3;
+
+  /* Roles */
+  --primary: var(--green);
+  --primary-hover: var(--green-dark);
+  --text: var(--navy);
+  --text-muted: #5b6774;
+  --surface: var(--white);
+  --background: var(--white);
+  --radius: 8px;
+  --radius-sm: 6px;
+  --max-width: 64rem;
+  --font: Arial, Helvetica, sans-serif;
+  --font-code: 'Courier New', Courier, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+a {
+  color: var(--green-dark);
+}
+
+a:hover {
+  color: var(--navy);
+}
+
+code,
+pre {
+  font-family: var(--font-code);
+}
+
+input,
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(46 173 51 / 0.45);
+  outline-offset: 2px;
+}
+
+/* Botón principal: verde Playwright, plano. */
+.btn-primary {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--green);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+/* Avisos tipo callout de las diapositivas. */
+.alert {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--gray);
+  background: #f4f6f8;
+  font-weight: 700;
+}
+
+.alert-success {
+  border-left-color: var(--green);
+  background: var(--green-soft);
+  color: var(--green-dark);
+}
+
+.alert-error {
+  border-left-color: var(--red);
+  background: #fdeeed;
+  color: #b23a30;
+}
+
+/* Campos de formulario comunes. */
+.field {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--text);
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgb(46 173 51 / 0.2);
+}
+
+/* Layout común de todas las páginas: cabecera con navegación, contenido y pie. */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Cabecera en azul marino, como la portada del deck. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--navy);
+  border-bottom: 3px solid var(--green);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.15rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--white);
+}
+
+.brand strong {
+  color: var(--green);
+}
+
+.brand-logo {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+.nav {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.nav a:hover {
+  background: var(--navy-2);
+  color: var(--white);
+}
+
+.nav a.active {
+  color: var(--green);
+}
+
+.nav a.nav-login {
+  border: 1px solid var(--green);
+}
+
+.site-main {
+  flex: 1;
+}
+
+.site-footer {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+  color: var(--gray);
+  font-size: 0.8rem;
+  text-align: center;
+}

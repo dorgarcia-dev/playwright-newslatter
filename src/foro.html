@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Foro · Foro Playwright</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/forum.css" />
+    <script type="module" src="/js/forum-page.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <span class="brand-logo" aria-hidden="true">▶</span>
+          <span>Foro <strong>Playwright</strong></span>
+        </a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="/foro" class="active">Foro</a>
+          <a href="/">Suscribirse</a>
+          <a class="nav-login" href="/login">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="forum">
+        <header class="forum-header">
+          <span class="eyebrow">Foro del taller</span>
+          <h1>Debates sobre testing E2E</h1>
+          <p class="lead">
+            Conversaciones de la comunidad sobre cada bloque del taller: pensar los casos, locators,
+            acciones y aserciones con Playwright.
+          </p>
+        </header>
+
+        <!-- forum-page.js pinta aquí los posts de forum-posts.js. -->
+        <div class="posts"></div>
+
+        <aside class="cta">
+          <div>
+            <h2>¿No quieres perderte ningún hilo?</h2>
+            <p>Recibe avisos de nuevos posts y un resumen semanal en tu correo.</p>
+          </div>
+          <a class="cta-button btn-primary" href="/">Suscríbete al foro</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">Taller Testing E2E con Playwright e IA · Orvium Labs</div>
+    </footer>
+  </body>
+</html>

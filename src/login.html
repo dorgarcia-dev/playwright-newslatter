@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Iniciar sesión · Foro Playwright</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <script type="module" src="/js/login-page.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <span class="brand-logo" aria-hidden="true">▶</span>
+          <span>Foro <strong>Playwright</strong></span>
+        </a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="/foro">Foro</a>
+          <a href="/">Suscribirse</a>
+          <a class="nav-login active" href="/login">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="login">
+        <div class="card">
+          <span class="logo" aria-hidden="true">▶</span>
+          <h1>Iniciar sesión</h1>
+          <p class="subtitle">Accede para participar en los debates del foro.</p>
+
+          <form id="login-form">
+            <label for="login-email">Correo electrónico</label>
+            <input
+              id="login-email"
+              class="field"
+              data-testid="login-email"
+              type="email"
+              autocomplete="email"
+              placeholder="nombre@empresa.com"
+            />
+
+            <label for="login-password">Contraseña</label>
+            <input
+              id="login-password"
+              class="field"
+              data-testid="login-password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="••••••••"
+            />
+
+            <label class="remember">
+              <input data-testid="login-remember" type="checkbox" />
+              Recordarme
+            </label>
+
+            <button class="btn-primary" data-testid="login-submit" type="submit">Entrar</button>
+          </form>
+          <!-- login-page.js inserta aquí el aviso de éxito o de error. -->
+
+          <div class="demo-users">
+            <p><strong>Usuarios de prueba</strong></p>
+            <!-- login-page.js rellena la lista con los usuarios de auth/mock-users.js. -->
+            <ul></ul>
+          </div>
+
+          <p class="signup">¿Aún no recibes las novedades? <a href="/">Suscríbete al foro</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">Taller Testing E2E con Playwright e IA · Orvium Labs</div>
+    </footer>
+  </body>
+</html>

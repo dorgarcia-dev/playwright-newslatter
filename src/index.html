@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Suscríbete · Foro Playwright</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/subscription.css" />
+    <script type="module" src="/js/subscription-page.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <span class="brand-logo" aria-hidden="true">▶</span>
+          <span>Foro <strong>Playwright</strong></span>
+        </a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="/foro">Foro</a>
+          <a href="/" class="active">Suscribirse</a>
+          <a class="nav-login" href="/login">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="subscribe">
+        <div class="hero">
+          <div class="hero-inner">
+            <span class="eyebrow">Comunidad · Testing E2E</span>
+            <h1>Suscríbete al foro</h1>
+            <p class="lead">
+              Únete a la comunidad del taller y entérate de cada nueva discusión sobre Playwright,
+              testing de extremo a extremo e IA aplicada a las pruebas.
+            </p>
+          </div>
+        </div>
+
+        <div class="content">
+          <ul class="benefits">
+            <li>
+              <span class="benefit-icon" aria-hidden="true">✉</span>
+              <div>
+                <strong>Avisos de nuevos posts</strong>
+                <p>Recibe un correo cuando alguien abra un hilo interesante.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon" aria-hidden="true">☰</span>
+              <div>
+                <strong>Resumen semanal</strong>
+                <p>Lo mejor de la semana en un solo correo, sin ruido.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon" aria-hidden="true">★</span>
+              <div>
+                <strong>Material del taller</strong>
+                <p>Ejemplos, diapositivas y retos antes que nadie.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="card">
+            <h2>Recibe las novedades</h2>
+            <p class="card-text">Solo necesitamos tu correo electrónico.</p>
+
+            <form id="subscribe-form">
+              <input
+                class="field"
+                data-testid="email"
+                type="text"
+                placeholder="tu@email.com"
+                aria-label="Correo electrónico"
+              />
+              <button class="btn-primary" data-testid="subscribe" type="submit">Suscribirse</button>
+            </form>
+            <!-- subscription-page.js inserta aquí el aviso de éxito. -->
+
+            <p class="privacy">
+              🔒 Sin spam. Solo usaremos tu correo para avisarte del foro y puedes darte de baja
+              cuando quieras.
+            </p>
+
+            <a class="forum-link" href="/foro">Echa un vistazo al foro →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">Taller Testing E2E con Playwright e IA · Orvium Labs</div>
+    </footer>
+  </body>
+</html>
